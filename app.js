@@ -1,18 +1,20 @@
+let inputBtn = document.querySelector(".input-btn");
+let input = document.querySelector(".input");
+
 class GameController {
-  constructor(word, life) {
+  constructor(word) {
     this.word = word;
-    this.life = life;
   }
 
   setUi() {
     // Update screen to show letter boxes
   }
 
-  currentLife() {
-    // show how many lives you currently have
-  }
-
-  decreaseLife() {
-    // subtract lives
+  getLetter(letter) {
+    console.log(input.value);
   }
 }
+
+const game1 = new GameController("Cat");
+
+inputBtn.addEventListener("click", game1.getLetter);
