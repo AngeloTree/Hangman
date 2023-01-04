@@ -1,5 +1,6 @@
 let inputBtn = document.querySelector(".input-btn");
 let input = document.querySelector(".input");
+let screen = document.querySelector(".screen");
 
 class GameController {
   constructor(word) {
