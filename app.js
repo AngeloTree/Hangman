@@ -9,7 +9,7 @@ class Player {
 }
 
 class GameController extends Player {
-  constructor(word) {
+  constructor(letter, word) {
     super(letter);
     this.word = word;
   }
@@ -18,16 +18,16 @@ class GameController extends Player {
     // Update screen to show letter boxes
   }
 
-  getLetter(letter) {
+  getLetter() {
     console.log(input.value);
   }
 
-  testLetter(letter) {
-    console.log(letter);
+  testLetter() {
+    console.log(player1.letter);
   }
 }
 
 const player1 = new Player("t");
 const hangman = new GameController("Cat");
 
-inputBtn.addEventListener("click", game1.getLetter);
+inputBtn.addEventListener("click", hangman.testLetter);
