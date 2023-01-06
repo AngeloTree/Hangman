@@ -3,31 +3,27 @@ let input = document.querySelector(".input");
 let screen = document.querySelector(".screen");
 
 class Player {
-  constructor(letter) {
-    this.letter = letter;
+  constructor(word) {
+    this.word = word;
   }
 }
 
 class GameController extends Player {
   constructor(letter, word) {
-    super(letter);
-    this.word = word;
+    super(word);
+    this.letter = letter;
   }
 
   setUi() {
     // Update screen to show letter boxes
   }
 
-  getLetter() {
-    console.log(input.value);
-  }
-
-  testLetter() {
-    console.log(player1.letter);
+  getWord() {
+    console.log(player1.word);
   }
 }
 
-const player1 = new Player("t");
-const hangman = new GameController("Cat");
+const player1 = new Player("cat");
+const hangman = new GameController("a");
 
-inputBtn.addEventListener("click", hangman.testLetter);
+inputBtn.addEventListener("click", hangman.getWord);
