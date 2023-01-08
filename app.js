@@ -22,8 +22,8 @@ class GameController extends Player {
     // Update screen to show letter boxes for the word
   }
 
-  getWord() {
-    console.log(player1.word);
+  getLetter() {
+    console.log(input.value);
   }
 }
 
@@ -31,5 +31,9 @@ const player1 = new Player("catt");
 const hangman = new GameController("a");
 
 inputBtn.addEventListener("click", () => {
-  player1.wordLength();
+  if (input.value.length <= 1 && input.value.length != 0) {
+    hangman.getLetter();
+  } else {
+    console.log("enter one letter only");
+  }
 });
