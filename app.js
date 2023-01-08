@@ -15,7 +15,7 @@ class GameController extends Player {
   }
 
   setUi() {
-    // Update screen to show letter boxes
+    // Update screen to show letter boxes for the word
   }
 
   getWord() {
