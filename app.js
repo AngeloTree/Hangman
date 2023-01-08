@@ -6,6 +6,10 @@ class Player {
   constructor(word) {
     this.word = word;
   }
+
+  wordLength() {
+    console.log(this.word.length);
+  }
 }
 
 class GameController extends Player {
@@ -23,7 +27,9 @@ class GameController extends Player {
   }
 }
 
-const player1 = new Player("cat");
+const player1 = new Player("catt");
 const hangman = new GameController("a");
 
-inputBtn.addEventListener("click", hangman.getWord);
+inputBtn.addEventListener("click", () => {
+  player1.wordLength();
+});
