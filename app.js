@@ -18,12 +18,14 @@ class GameController extends Player {
     this.letter = letter;
   }
 
-  setUi() {
+  setUi(letterValue) {
     // Update screen to show letter boxes for the word
+    console.log(letterValue);
   }
 
   getLetter() {
-    console.log(input.value);
+    let letterValue = input.value;
+    this.setUi(letterValue);
   }
 }
 
